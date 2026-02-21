@@ -27,6 +27,12 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->viteTheme('resources/css/filament/admin/theme.css')
+            ->brandName('SkyKidsWear')
+            ->sidebarCollapsibleOnDesktop()
+            ->sidebarWidth('18rem')
+            ->globalSearch(false)
+            // ->topNavigation()
             ->login()
             ->colors([
                 'primary' => Color::Amber,
@@ -39,7 +45,7 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->widgets([
                 AccountWidget::class,
-                FilamentInfoWidget::class,
+                // FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,

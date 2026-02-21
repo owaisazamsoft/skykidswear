@@ -1,0 +1,90 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+@theme{
+    --color-main-primary: #343A40;
+    --color-main-secondary: #F5F6F9;
+}
+
+
+
+
+
+/* Sider Bar */
+aside.fi-sidebar {
+
+    @apply bg-gradient-to-b from-slate-800 to-slate-800;
+
+    & .fi-sidebar-nav-groups{
+        row-gap: 2px;
+    }
+
+
+    & .fi-sidebar-nav{
+        @apply  pt-2;
+    }
+
+
+    & .fi-sidebar-item{
+
+        & .fi-sidebar-item-btn{
+
+            & .fi-sidebar-item-icon, .fi-sidebar-item-label   {
+                @apply text-gray-100;
+            }
+
+        }
+
+    }
+
+    /* Sidebar Active */
+    & .fi-sidebar-item.fi-active , .fi-sidebar-item:hover {
+
+        & .fi-sidebar-item-btn{
+            @apply bg-primary-400;
+
+            & .fi-sidebar-item-icon, .fi-sidebar-item-label   {
+                /* @apply text-black; */
+            }
+
+        }
+
+    }
+
+    
+
+    /* header.fi-sidebar-header{
+        @apply h-12;
+    } */
+
+}
+
+.fi-topbar{
+
+    @apply pl-0 bg-slate-800;
+
+    & .fi-topbar-start{
+        /* @apply bg-black text-white; */
+    }
+
+    & .fi-logo{
+        @apply text-white;
+    }
+
+    & .fi-topbar-start{
+        @apply bg-slate-800;
+        padding-left: 0px;
+        width: 273px;
+        height: 63px;
+    }
+        
+}
+
+   
+
+
+
+
+
